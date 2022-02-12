@@ -91,19 +91,52 @@ namespace LogoKaresz
             }
         }
 
+
+
+		void szigetj(int sokszog, int ev, double meret)
+        {
+			for (int i = 0; i < sokszog; i++)
+			{
+				Egy_fraktal(ev, meret);
+				Jobbra(360 / sokszog);
+			}
+        }
+
+		void szigete(int sokszog, int ev, double meret)
+        {
+			for (int i = 0; i < sokszog; i++)
+			{
+				Egy_fraktal(ev, meret);
+				Balra(360 / sokszog);
+			}
+        }
+
 		void FELADAT()
 		{
 
 
 
 
-			Teleport(közép.X - 150, közép.Y + 100, észak);
+			Teleport(közép.X - 150, közép.Y + 50, észak);
 
-			Jobbra(90);
+			
+		/*	
+			using(new Frissítés(false))
+			{
+				szigetj(5, 2, 100);
+			}
+			
+		*/
+			 
 
-			//Cgorbe(6, 100);
 
-			Egy_fraktal(6, 100);
+		/* 
+			using(new Frissítés(false))
+			{
+				szigete(5, 2, 100);
+			}
+			
+		*/
 
 			
 		}
